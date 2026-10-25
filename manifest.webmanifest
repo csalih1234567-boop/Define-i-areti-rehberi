@@ -1,0 +1,14 @@
+{
+  "name": "Define İşaret Rehberi",
+  "short_name": "İşaret Rehberi",
+  "description": "Kültürel miras ve işaretler hakkında çevrimdışı bilgilendirme rehberi.",
+  "lang": "tr-TR",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f4e9",
+  "theme_color": "#123c2d",
+  "icons": [
+    {"src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"}
+  ]
+}

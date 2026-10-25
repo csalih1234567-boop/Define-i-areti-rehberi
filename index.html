@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#123c2d">
+  <meta name="description" content="Kültürel miras, halk anlatıları ve işaret yorumları hakkında çevrimdışı bilgilendirme rehberi.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <title>Define İşaret Rehberi</title>
+  <style>
+    :root{--green:#123c2d;--green2:#1d5941;--gold:#d8b45a;--cream:#f7f4e9;--ink:#18352a;--muted:#64776c;--card:#fffdf7}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}
+    header{background:linear-gradient(135deg,var(--green),#20563e);color:white;padding:28px 18px 24px;border-bottom:4px solid var(--gold)}
+    .wrap{max-width:900px;margin:auto}
+    .brand{display:flex;align-items:center;gap:12px}
+    .mark{width:48px;height:48px;flex:none}
+    h1{font-size:1.45rem;line-height:1.2;margin:0}
+    header p{color:#e9e1c8;margin:14px 0 0;max-width:680px}
+    main{padding:18px 14px 40px}
+    .notice{background:#fff3d0;border:1px solid #e5cb7c;border-radius:14px;padding:14px 15px;margin-bottom:18px}
+    .notice strong{color:#6c4a00}
+    .tools{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 18px}
+    input,select{font:inherit;border:1px solid #cbd5ca;border-radius:12px;padding:12px;background:white;color:var(--ink);min-height:46px}
+    input{flex:1;min-width:190px}
+    select{min-width:150px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:13px}
+    .card{background:var(--card);border:1px solid #e4e0d2;border-radius:16px;padding:16px;box-shadow:0 3px 12px #173e2c0a}
+    .symbol{font-size:1.65rem;color:#987321;background:#f4ecd2;width:48px;height:48px;border-radius:13px;display:grid;place-items:center;margin-bottom:10px}
+    .card h2{font-size:1.05rem;margin:0 0 7px}
+    .tag{display:inline-block;font-size:.75rem;color:var(--green2);background:#e7f0e7;border-radius:999px;padding:3px 9px;margin-bottom:9px}
+    .card p{margin:0 0 8px}
+    .small{font-size:.88rem;color:var(--muted)}
+    details{margin-top:10px}
+    summary{cursor:pointer;color:var(--green2);font-weight:650}
+    .empty{display:none;padding:18px;text-align:center;color:var(--muted)}
+    footer{border-top:1px solid #ded9c8;padding:20px 14px;color:var(--muted);font-size:.85rem}
+    .pill{border:1px solid #b6c7b7;border-radius:999px;padding:7px 11px;color:var(--green2);background:transparent;font:inherit}
+    .pill:active{background:#e6eee5}
+    a{color:#1d5941}
+    @media(min-width:700px){header{padding:34px 24px}main{padding:24px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 3 59 18v28L32 61 5 46V18Z" fill="none" stroke="#d8b45a" stroke-width="2.5"/><path d="M32 13 49 23v18L32 51 15 41V23Z" fill="none" stroke="#d8b45a" stroke-width="1.5"/><path d="M22 40 32 20 42 40M26 33h12" fill="none" stroke="#fff8df" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><h1>Define İşaret Rehberi</h1><div style="color:#e7d49b;font-size:.9rem">Kültürel miras • Halk anlatıları • Güvenli keşif</div></div>
+    </div>
+    <p>İşaretlerle ilgili yaygın anlatıları ve tarihî bağlamı keşfet. Bu rehber eğitim amaçlıdır; tek bir şekilden kesin sonuç çıkarılamaz.</p>
+  </div>
+</header>
+<main class="wrap">
+  <div class="notice"><strong>Önemli:</strong> İşaretler tek başına gömü veya define kanıtı değildir. Tarihî alanları kazmayın, taşları/nesneleri yerinden oynatmayın. Arkeolojik buluntu ya da şüpheli bir durum görürseniz ilgili müze müdürlüğüne veya yetkili makamlara bildirin.</div>
+  <div class="tools">
+    <input id="search" type="search" placeholder="Rehberde ara…" aria-label="Rehberde ara">
+    <select id="category" aria-label="Kategori seç">
+      <option value="all">Tüm kategoriler</option>
+      <option value="motif">Motif ve şekiller</option>
+      <option value="arazi">Arazi ve taşlar</option>
+      <option value="tarih">Tarihî bağlam</option>
+      <option value="guvenlik">Güvenlik ve hukuk</option>
+    </select>
+    <button class="pill" id="reset" type="button">Temizle</button>
+  </div>
+  <section class="grid" id="cards" aria-live="polite">
+    <article class="card" data-category="motif" data-search="daire halka çember motif sembol">
+      <div class="symbol" aria-hidden="true">◎</div><span class="tag">Motif ve şekiller</span>
+      <h2>Daire ve halkalar</h2>
+      <p>Daire biçimleri farklı dönemlerde süsleme, işaretleme veya geometrik motif olarak kullanılmış olabilir.</p>
+      <details><summary>Nasıl değerlendirilir?</summary><p class="small">Konum, yapım tekniği, çevredeki yapı ve belgelenmiş tarihî bağlam önemlidir. Daire şekli tek başına bir yerin altında bir şey bulunduğunu göstermez.</p></details>
+    </article>
+    <article class="card" data-category="motif" data-search="çizgi oluk kanal çizik yön işaret">
+      <div class="symbol" aria-hidden="true">≋</div><span class="tag">Motif ve şekiller</span>
+      <h2>Çizgiler ve oluklar</h2>
+      <p>Taş yüzeyindeki çizgiler doğal aşınma, eski işçilik, sınır işareti veya daha yeni müdahale olabilir.</p>
+      <details><summary>Nelere dikkat edilir?</summary><p class="small">Aşınma, çevredeki taşlarla uyum ve güvenilir kayıtlar uzman değerlendirmesi gerektirir. Çizginin yönünü izleyerek kazı yapmak güvenilir bir yöntem değildir.</p></details>
+    </article>
+    <article class="card" data-category="motif" data-search="haç yıldız geometrik motif sembol">
+      <div class="symbol" aria-hidden="true">✳</div><span class="tag">Motif ve şekiller</span>
+      <h2>Yıldız ve geometrik motifler</h2>
+      <p>Geometrik şekiller mimaride, süslemede ve farklı kültürel geleneklerde görülebilir.</p>
+      <details><summary>Yorumlama sınırı</summary><p class="small">Benzer şekiller farklı dönemlerde farklı anlamlar taşıyabilir. Tarihlendirme için yalnızca şekle değil, uzman incelemesine ve arşiv kayıtlarına ihtiyaç vardır.</p></details>
+    </article>
+    <article class="card" data-category="arazi" data-search="oyuk delik taş doğal aşınma">
+      <div class="symbol" aria-hidden="true">◉</div><span class="tag">Arazi ve taşlar</span>
+      <h2>Taş üzerindeki oyuklar</h2>
+      <p>Oyuklar doğal süreçlerle oluşabileceği gibi gündelik kullanım veya tarihî işçilikten de kaynaklanabilir.</p>
+      <details><summary>Güvenli yaklaşım</summary><p class="small">Oyukları büyütmeyin, içini kazımayın ve taşları kaldırmayın. Fotoğraf ve konum bilgisini güvenli mesafeden kaydedip uzmanlara danışın.</p></details>
+    </article>
+    <article class="card" data-category="arazi" data-search="yığma taş duvar temel yapı kalıntısı">
+      <div class="symbol" aria-hidden="true">▥</div><span class="tag">Arazi ve taşlar</span>
+      <h2>Taş yığınları ve duvar izleri</h2>
+      <p>Taş dizileri eski yapı, tarım sınırı, modern düzenleme veya doğal birikim olabilir.</p>
+      <details><summary>Neden yerinde bırakılmalı?</summary><p class="small">Taşları oynatmak arkeolojik bağlamı yok edebilir ve tehlike yaratabilir. Alanı olduğu gibi bırakıp ilgili müze müdürlüğünden görüş alın.</p></details>
+    </article>
+    <article class="card" data-category="tarih" data-search="tarihî kayıt kitabe yazıt arşiv uzman">
+      <div class="symbol" aria-hidden="true">⌘</div><span class="tag">Tarihî bağlam</span>
+      <h2>Yazıtlar ve tarihî kayıtlar</h2>
+      <p>Bir yazıtın dili, tarihi ve bulunduğu yapı, geçmişi anlamak için şeklin kendisinden daha fazla bilgi verebilir.</p>
+      <details><summary>Başvurulabilecek kaynaklar</summary><p class="small">Müze müdürlükleri, üniversitelerin arkeoloji/tarih bölümleri ve yayımlanmış envanterler güvenilir başlangıç noktalarıdır.</p></details>
+    </article>
+    <article class="card" data-category="guvenlik" data-search="kazı izin kültür varlığı kanun güvenlik">
+      <div class="symbol" aria-hidden="true">⚖</div><span class="tag">Güvenlik ve hukuk</span>
+      <h2>Kazı ve kültür varlıkları</h2>
+      <p>İzinsiz kazı ve kültür varlıklarına zarar verme ciddi hukuki sonuçlar doğurabilir.</p>
+      <details><summary>Ne yapmalı?</summary><p class="small">Kazı yapmayın, nesne çıkarmayın ve özel mülke izinsiz girmeyin. Türkiye'de güncel yükümlülükler için Kültür ve Turizm Bakanlığı, müze müdürlüğü veya yetkili makamlardan bilgi alın.</p></details>
+    </article>
+    <article class="card" data-category="guvenlik" data-search="şüpheli buluntu patlayıcı mühimmat güvenlik">
+      <div class="symbol" aria-hidden="true">!</div><span class="tag">Güvenlik ve hukuk</span>
+      <h2>Şüpheli nesne bulursanız</h2>
+      <p>Metal, kapalı kap, mühimmat veya tanımlanamayan bir nesne tehlikeli olabilir.</p>
+      <details><summary>Güvenli adımlar</summary><p class="small">Dokunmayın, taşımayın ve temizlemeyin. Bölgeden uzaklaşın; acil tehlikede 112'yi arayın ve yetkililerin talimatlarını izleyin.</p></details>
+    </article>
+  </section>
+  <p class="empty" id="empty">Aramanızla eşleşen başlık bulunamadı.</p>
+  <p class="small" style="margin-top:20px">Bu içerik genel bilgilendirme içindir; uzman raporu veya hukuki danışmanlık yerine geçmez.</p>
+</main>
+<footer><div class="wrap">© <span id="year"></span> Define İşaret Rehberi · İlk kez internet bağlantısıyla açıldıktan sonra çevrimdışı kullanılabilir.</div></footer>
+<script>
+  const search = document.getElementById('search');
+  const category = document.getElementById('category');
+  const cards = [...document.querySelectorAll('.card')];
+  const empty = document.getElementById('empty');
+  function filterCards(){
+    const q = search.value.trim().toLocaleLowerCase('tr');
+    let shown = 0;
+    cards.forEach(card => {
+      const matchesText = (card.innerText + ' ' + card.dataset.search).toLocaleLowerCase('tr').includes(q);
+      const matchesCategory = category.value === 'all' || card.dataset.category === category.value;
+      card.hidden = !(matchesText && matchesCategory);
+      if (!card.hidden) shown++;
+    });
+    empty.style.display = shown ? 'none' : 'block';
+  }
+  search.addEventListener('input', filterCards);
+  category.addEventListener('change', filterCards);
+  document.getElementById('reset').addEventListener('click', () => { search.value=''; category.value='all'; filterCards(); search.focus(); });
+  document.getElementById('year').textContent = new Date().getFullYear();
+  if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+    window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js').catch(()=>{}));
+  }
+</script>
+</body>
+</html>
